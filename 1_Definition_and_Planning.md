@@ -45,7 +45,7 @@ This project aims to create a portfolio website that allows users to add and upd
     - Category(team or solo)
 - Project appears dynamically on the public portfolio page.
 
-## Adding a Experience
+### Adding a Experience
 - User selects "Add Experience" from the dashboard.
 - Provides details:
     - job role
@@ -59,8 +59,6 @@ This project aims to create a portfolio website that allows users to add and upd
 - Visitors navigate the portfolio to explore projects, skills, and experiences.
 
 ## 3. UI Prototypes
-- The website consists of two primary pages:
-
 ### Admin Page (for content management)
 - Users can add/edit skills, projects, and experience.
 - Intuitive form-based UI for seamless content updates.
@@ -90,9 +88,8 @@ This project aims to create a portfolio website that allows users to add and upd
     - Skills
     - Projects (linked to skills)
     - Experience
-    - Deployment
 
-### Deploy
+### Deployment
 - Hosted on **Google Cloud Run** for scalability and efficiency.
 
 ## 5. Project Management and User Testing
