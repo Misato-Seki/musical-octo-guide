@@ -1,4 +1,4 @@
-// APIルートを定義
+// Define API routes
 // node backend/server.js
 const express = require('express');
 const cors = require('cors');
@@ -6,7 +6,7 @@ const pool = require('./db');
 
 const app = express();
 app.use(cors());
-app.use(express.json()); // リクエストボディをJSON形式に指定
+app.use(express.json()); // Specify the request body as JSON format
 
 // GET: all skills
 app.get('/api/skills', async (req, res) => {

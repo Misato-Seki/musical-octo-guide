@@ -1,5 +1,5 @@
-// データベースのテーブルを作成
-// node     models/schema.js
+// Create database tables
+// node models/schema.js
 
 const pool = require('../db')
 

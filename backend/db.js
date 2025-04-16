@@ -1,4 +1,4 @@
-// PostgreSQLに接続する
+// Connect to PostgreSQL
 const { Pool } = require('pg')
 require('dotenv').config()
 
