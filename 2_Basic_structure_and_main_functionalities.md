@@ -19,7 +19,7 @@ The backend server is implemented using Node.js and Express.js. It is responsibl
 - **CORS** middleware is applied to allow cross-origin requests.
 - **PostgreSQL** is used as the database, with connection managed by a connection pool.
 
-Here is a link to the server setup file: [server.js](../backend/server.js)
+Here is a link to the server setup file: [server.js](./backend/server.js)
 
 The server can be started by running the following command in the terminal from the `backend` directory:
 
@@ -36,7 +36,7 @@ The frontend of the project is implemented using modern web development technolo
 - **TypeScript**: Used for type safety and better developer experience, ensuring fewer runtime errors and improved code maintainability.
 - **TailwindCSS**: A utility-first CSS framework used for styling. It allows for rapid UI development with a consistent design system.
 
-Here is a link to the main entry point for the frontend: [page.tsx](../frontend/app/page.tsx)
+Here is a link to the main entry point for the frontend: [page.tsx](./frontend/app/page.tsx)
 
 To start the frontend development server, navigate to the `frontend` directory and run the following command:
 
@@ -55,7 +55,7 @@ The project uses **PostgreSQL** as its database management system. It is chosen 
 - **Schema Management**: The database schema is designed to store information about skills, projects, and experiences. Tables are normalized to reduce redundancy and ensure data integrity.
 - **Query Execution**: SQL queries are executed using parameterized queries to prevent SQL injection attacks. The `pg` library provides methods to execute queries and handle results efficiently.
 
-Here is a link to the database configuration file: [db.js](../backend/db.js)
+Here is a link to the database configuration file: [db.js](./backend/db.js)
 
 ## 5. Basic structure and architecture
 
