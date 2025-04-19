@@ -1,16 +1,13 @@
 # Project phase 2 - Basic structure and main functionalities
 
-This document provides a detailed summary of the project's second(current) phase, focusing on its architecture, core functionalities.
+This document provides a detailed summary of the project's second phase(current situation), focusing on its architecture and core functionalities.
 
 ## 1. Environment
-- **Local Development**: The project can be run locally using Node.js and PostgreSQL.
-- **Version Control**: The codebase is managed using Git and hosted on GitHub.
-- **Environment Variables**: Sensitive information such as database connection strings are managed using environment variables. These are stored in a `.env` file.
+- **Current**: The project can be run **locally** using Node.js and PostgreSQL.
+- **Future**: The project will be deployed using Cloud service.
 
 ## 2. Backend
 - **Express.js** is used to define API routes and handle HTTP requests.
-- endpoint to retrive all skills and register news skill (**/api/skills**) is ready.
-
 
 Here is a link to the server setup file: [server.js](./backend/server.js)
 
@@ -26,7 +23,6 @@ node server.js
 - **Next.js**: Next.js handles routing through its file-based routing system.
 - **TypeScript**: Used for type safety.
 - **TailwindCSS**: A utility-first CSS framework used for styling.
-- **API Integration**: Connected the backend and frontend to enable seamless data exchange.
 
 Here is a link to the main entry point for the frontend: [page.tsx](./frontend/app/page.tsx)
 
@@ -52,6 +48,8 @@ Here is a link to the database configuration file: [db.js](./backend/db.js) / [s
 
 ## 6. Functionalities
 
+Currently, only a functionality (displaying skills) has been implemented as the project is still in the basic structure design phase. The following features are planned for future implementation:
+
 - **Skill Management**: Users can add, update, and delete skills. These skills are displayed on the portfolio page.
 - **Project Showcase**: Users can showcase their projects with details such as title, description, and links to live demos or repositories.
 - **Experience Timeline**: Users can add professional experiences, which are displayed in a timeline format.
@@ -63,16 +61,18 @@ Here is a link to the database configuration file: [db.js](./backend/db.js) / [s
 
 - **Linting and Formatting**: Tools like ESLint and Prettier are used to enforce coding standards and maintain consistent formatting.
 - **Type Safety**: TypeScript is used throughout the project to catch errors during development and improve code readability.
-- **Documentation**: The codebase will be documented using comments and README files. API endpoints will be documented to assist developers in understanding the backend services.
 - **Version Control**: Git is used to track changes, and meaningful commit messages are written to provide context for each change.
 
 ## 8. Testing and error handling
+
+Currently, no specific tests or error-handling mechanisms have been implemented as the project is still in the basic structure design phase. The following tests and error-handling features are planned for future implementation.
 
 - **CI/CD pipeline**: Implement automated testing in the CI/CD pipeline to verify that the application builds and deploy successfully to the cloud environment.
 - **Backend**: Use centralized error handling in Express.js to manage validation and server errors. Log errors for debugging purposes.
 - **Frontend**: Display user-friendly error messages for API failures and use React Error Boundaries to handle UI crashes.
 
 ## 9. User interface and interaction
+Currently, no specific UI/UX considerations have been made as the project is still in the basic structure design phase. The following UI/UX improvements are planned for the future:
 
 - **Intuitive Navigation**: The application will feature a clean and intuitive navigation system, allowing users to access different sections effortlessly.
 - **Interactive Elements**: Buttons and other interactive elements will be styled and animated to enhance user engagement.
