@@ -8,4 +8,5 @@
 | 10.4.2025 | 2 | setup(frontend)  | create frontend and connect with backend  |
 | 11.4.2025 | 2 | setup(database)  | change db fromtSQLite to PostgreSQL  |
 | 16.4.2025 | 3 | Planning the phase 2  | report writing  |
+| 19.4.2025 | 1 | Planning the phase 2  | report fixing  |
 
