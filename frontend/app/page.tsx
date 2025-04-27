@@ -1,22 +1,19 @@
-'use client'
-import { useEffect, useState } from "react";
+// 'use client'
+import directus from '@/lib/directus';
+import { readItems } from '@directus/sdk';
 
-interface skills {
-  id: number
-  name: string
+async function getSkills() {
+  return directus.request(readItems('skills'));
 }
 
-export default function Home() {
-  const [skills, setSkills] = useState<skills[]>([])
-  useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_URL}/api/skills`)
-    .then(response => response.json())
-    .then(data => setSkills(data))
-  },[])
+export default async function Home() {
+  const skills = await getSkills();
+  
   return (
     <div className="mt-50">
       {skills.map((skill) => (
         <div key={skill.id}>
+          <p>{skill.category}</p>
           <p>{skill.name}</p>
         </div>
       ))}
