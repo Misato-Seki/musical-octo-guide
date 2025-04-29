@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import localFont from 'next/font/local';
 import "./globals.css";
+import NavBar from '@/components/NavBar';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -10,6 +12,27 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const josefinSlab = localFont({
+  src: [
+    {
+      path: './fonts/JosefinSlab-SemiBold.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: './fonts/JosefinSlab-Bold.ttf',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: './fonts/JosefinSlab-Italic.ttf',
+      weight: '400',
+      style: 'italic',
+    },
+  ],
+  variable: '--font-josefin-slab',
 });
 
 export const metadata: Metadata = {
@@ -25,9 +48,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${josefinSlab.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <div className="relative">
+          <NavBar />
+          <main className="absolute top-16 md:top-0 md:left-64 w-[calc(100vw-16rem)]">
+            {children}
+          </main>
+        </div>
       </body>
     </html>
   );
