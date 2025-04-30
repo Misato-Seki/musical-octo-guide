@@ -2,12 +2,22 @@ export interface Project {
   id: number;
   title: string;
   skills: string[];
-  period: string;
-  type: string;
-  githubUrl: string;
-  demoUrl: string;
-  imageUrl: string;
-  overview: string;
-  keyFeatures: string[];
-  technicalArchitecture: string[];
+  start_date: string;
+  end_date: string;
+  category: string;
+  github_link: string;
+  demo_link: string;
+  image: string;
+  description: string;
 } 
+
+export interface ProjectSkills {
+  id: number;
+  project_id: number;
+  skills_id: number;
+}
+
+export interface Skills {
+  id: number;
+  name: string;
+}

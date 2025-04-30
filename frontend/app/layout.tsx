@@ -52,7 +52,7 @@ export default function RootLayout({
       >
         <div className="relative">
           <NavBar />
-          <main className="absolute top-16 md:top-0 md:left-64 w-[calc(100vw-16rem)]">
+          <main className="absolute top-16 md:top-0 md:left-64 md:w-[calc(100vw-16rem)] w-full">
             {children}
           </main>
         </div>
