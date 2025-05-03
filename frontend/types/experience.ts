@@ -3,6 +3,6 @@ export type Experience = {
   position_degree: string;
   company_school: string;
   start_date: string;
-  end_date: string;
+  end_date?: string;
   description: string;
 }; 

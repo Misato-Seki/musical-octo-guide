@@ -27,5 +27,10 @@ export default async function ProjectsPage() {
       .map(ps => skillsList.find(s => s.id === ps.skills_id)?.name || '');
     return { ...project, skills: projectSkills };
   });
-  return <ProjectsList initialProjects={projectsWithSkills} />;
+  return( 
+    <div className="container mx-auto px-4 py-12 max-w-4xl">
+      <h1 className="text-3xl font-bold mb-8">My Projects</h1>
+      <ProjectsList initialProjects={projectsWithSkills} />
+    </div>
+);
 }
