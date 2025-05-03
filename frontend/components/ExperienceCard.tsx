@@ -2,6 +2,7 @@
 import { Experience } from '../types/experience';
 import { FaGraduationCap, FaBriefcase } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import { formatDate } from '@/components/DateFormat';
 
 interface ExperienceCardProps {
   experience: Experience;
@@ -30,7 +31,7 @@ export const ExperienceCard = ({ experience }: ExperienceCardProps) => {
           {experience.company_school}
         </p>
         <p className="text-sm text-gray-500 mb-2">
-          {experience.start_date} - {experience.end_date}
+          {formatDate(experience.start_date)} - {formatDate(experience.end_date)}
         </p>
         <p className="text-gray-600">
           {experience.description}
