@@ -1,8 +1,45 @@
 'use client'
 import React from "react";
 import { motion } from "framer-motion";
-import { FaGithub, FaInstagram, FaLinkedin, FaTiktok, FaTwitter } from "react-icons/fa";
-import { CgWebsite } from "react-icons/cg";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+
+const socialLinks = [
+    // {
+    //   href: "https://twitter.com/your_twitter",
+    //   label: "Twitter",
+    //   icon: <FaTwitter />,
+    // },
+    {
+      href: "https://github.com/Misato-Seki",
+      label: "GitHub",
+      icon: <FaGithub />,
+    },
+    {
+      href: "https://www.linkedin.com/in/misato-seki-198a16251/",
+      label: "LinkedIn",
+      icon: <FaLinkedin />,
+    },
+    // {
+    //   href: "https://instagram.com/mock_instagram",
+    //   label: "Instagram",
+    //   icon: <FaInstagram />,
+    // },
+    // {
+    //   href: "https://tiktok.com/@mock_tiktok",
+    //   label: "TikTok",
+    //   icon: <FaTiktok />,
+    // },
+    // {
+    //   href: "https://mockblog.com",
+    //   label: "Blog",
+    //   icon: <CgWebsite />,
+    // },
+    // {
+    //   href: "https://www.youtube.com/misato_seki/",
+    //   label: "Youtube",
+    //   icon: <FaYoutube />,
+    // },
+  ]
 
 export default function Contact() {
     const [statusMessage, setStatusMessage] = React.useState("");
@@ -69,30 +106,18 @@ export default function Contact() {
           </div>
           <button type="submit" className="w-full bg-gray-600 text-white font-semibold py-2 rounded-lg shadow hover:bg-black transition">Submit Form</button>
       <div className="mt-1 flex justify-center space-x-6">
-        {/* Twitter */}
-        <a href="https://twitter.com/your_twitter" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-gray-600 hover:text-black text-2xl">
-            <FaTwitter />
-        </a>
-        {/* GitHub */}
-        <a href="https://github.com/Misato-Seki" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-gray-600 hover:text-black text-2xl">
-            <FaGithub />
-        </a>
-        {/* LinkedIn */}
-        <a href="https://www.linkedin.com/in/misato-seki-198a16251/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-gray-600 hover:text-black text-2xl">
-            <FaLinkedin />
-        </a>
-        {/* Instagram */}
-        <a href="https://instagram.com/mock_instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-gray-600 hover:text-black text-2xl">
-            <FaInstagram />
-        </a>
-        {/* TikTok */}
-        <a href="https://tiktok.com/@mock_tiktok" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="text-gray-600 hover:text-black text-2xl">
-            <FaTiktok />
-        </a>
-        {/* Blog */}
-        <a href="https://mockblog.com" target="_blank" rel="noopener noreferrer" aria-label="Blog" className="text-gray-600 hover:text-black text-2xl">
-            <CgWebsite />
-        </a>
+        {socialLinks.map(({ href, label, icon }) => (
+          <a
+            key={label}
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={label}
+            className="text-gray-600 hover:text-black text-2xl"
+          >
+            {icon}
+          </a>
+        ))}
       </div>
       </motion.form>
     </div>
