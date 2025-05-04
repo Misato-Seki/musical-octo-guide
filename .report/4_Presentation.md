@@ -103,8 +103,8 @@ This project aims to create a portfolio website along with an admin panel to man
 | 30.4.2025 | 5          | create portfolio page ui    | integrate API                        |
 | 1.5.2025  | 4          | create portfolio page ui    | create experience page ui            |
 | 3.5.2025  | 4          | create portfolio page ui    | create contact page ui, change file structure |
-| 4.5.2025  |         | Phase 3 and 4    | report writing               |
-| **Total**  | **--h** |                                 |   |
+| 4.5.2025  | 4        | Phase 3 and 4    | report writing, responsive design               |
+| **Total**  | **55h** |                                 |   |
 
 ---
 
