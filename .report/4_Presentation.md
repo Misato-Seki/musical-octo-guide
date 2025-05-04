@@ -110,4 +110,5 @@ This project aims to create a portfolio website along with an admin panel to man
 
 ## 🪢 Presentation link
 
-_Add a link to your video presentation or state that it was presented live._
+<!-- _Add a link to your video presentation or state that it was presented live._ -->
+[Presentation Link](https://youtu.be/3OvQ-3Kkjkc)
