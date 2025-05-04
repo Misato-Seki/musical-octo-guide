@@ -3,6 +3,8 @@ import { Experience } from '../types/experience';
 import { FaGraduationCap, FaBriefcase } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { formatDate } from '@/components/DateFormat';
+import { useState } from 'react';
+import { GoChevronDown, GoChevronUp } from "react-icons/go";
 
 interface ExperienceCardProps {
   experience: Experience;
@@ -12,6 +14,8 @@ export const ExperienceCard = ({ experience }: ExperienceCardProps) => {
   const icon = experience.category === 'education' ? 
     <FaGraduationCap className="w-6 h-6 text-gray-900" /> : 
     <FaBriefcase className="w-6 h-6 text-gray-900" />;
+
+  const [open, setOpen] = useState(false);
 
   return (
     <motion.div
@@ -33,9 +37,18 @@ export const ExperienceCard = ({ experience }: ExperienceCardProps) => {
         <p className="text-sm text-gray-500 mb-2">
           {formatDate(experience.start_date)} - {formatDate(experience.end_date)}
         </p>
-        <p className="text-gray-600">
-          {experience.description}
-        </p>
+        <button
+          onClick={() => setOpen(!open)}
+          className="flex items-center gap-2 text-gray-600 hover:text-black focus:outline-none mb-2"
+        >
+          <span>View Details</span>
+          {open ? <GoChevronUp /> : <GoChevronDown />}
+        </button>
+        {open && (
+          <p className="text-gray-600">
+            {experience.description}
+          </p>
+        )}
       </div>
     </div>
     </motion.div>

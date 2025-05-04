@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center">
+    <div className="h-[calc(100vh-4rem)] md:h-screen flex flex-col items-center justify-center px-4">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -24,7 +24,8 @@ export default function Home() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
       >
-        Hello, I am Misato Seki.
+        <p>Hello, I am Misato Seki.</p>
+        <p className="text-gray-600 text-sm font-normal mt-2">Web Developer / Frontend Engineer / Full Stack Developer</p>
       </motion.h1>
     </div>
   );
